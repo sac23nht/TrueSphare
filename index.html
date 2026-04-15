@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrueSphere Tax & Accounting Services</title>
+    <!-- NEW: SEO Powerful Meta Tags for Hyderabad -->
+    <title>Top Chartered Accountant (CA) in Hyderabad | TrueSphere Tax & Accounting</title>
+    <meta name="description" content="TrueSphere is a leading CA firm in Hyderabad offering expert Income Tax filing, GST returns, company registration, bookkeeping, and virtual CFO services.">
+    <meta name="keywords" content="CA in Hyderabad, Best Chartered Accountant Hyderabad, Tax Consultant Hyderabad, ITR filing Hyderabad, GST Registration Hyderabad, Company Incorporation Hyderabad, Accounting Services Hyderabad">
+    <meta name="robots" content="index, follow">
+    
+    <!-- NEW: Local Business Schema Markup for Google Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      "name": "TrueSphere Tax & Accounting Services",
+      "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=1000&auto=format&fit=crop",
+      "@id": "",
+      "url": "https://www.truesphere.in",
+      "telephone": "+917396860591",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 17.3850,
+        "longitude": 78.4867
+      },
+      "areaServed": "Hyderabad",
+      "priceRange": "$$"
+    }
+    </script>
     <style>
         /* Premium Financial Color Palette */
         :root {
@@ -20,6 +50,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -61,13 +92,30 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             font-size: 1.5rem;
             font-weight: bold;
             letter-spacing: -0.5px;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            transition: transform 0.4s ease;
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(45deg);
         }
 
         .logo span {
             color: #38bdf8; 
+            font-weight: 400;
+            font-size: 1.1rem;
+            margin-left: 5px;
         }
 
         nav ul {
@@ -89,6 +137,70 @@
             color: white;
         }
 
+        /* NEW: Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            padding: 10px 0; /* Creates a hover bridge */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 280px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            z-index: 1001;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0.5rem 0;
+            border: 1px solid #e2e8f0;
+            max-height: 50vh; /* Limits height to 50% of the screen */
+            overflow-y: auto; /* Adds the scrollbar */
+        }
+
+        /* Custom Scrollbar styling for a cleaner look */
+        .dropdown-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        .dropdown-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .dropdown-content::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        nav .dropdown-content a {
+            color: var(--text);
+            padding: 12px 20px;
+            display: block;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f1f5f9;
+            transition: all 0.2s;
+        }
+
+        nav .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        nav .dropdown-content a:hover {
+            background-color: var(--light);
+            color: var(--secondary);
+            padding-left: 25px; /* Smooth indent hover effect */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, 10px); }
+            to { opacity: 1; transform: translate(-50%, 0); }
+        }
+
         .btn-nav {
             background-color: var(--secondary);
             color: white !important;
@@ -106,14 +218,14 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
             padding: 9rem 5%;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
         }
 
         .hero h4 {
-            color: var(--secondary);
+            color: #38bdf8;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1rem;
@@ -123,7 +235,7 @@
 
         .hero h1 {
             font-size: 3.8rem;
-            color: var(--dark);
+            color: white;
             margin-bottom: 1.5rem;
             line-height: 1.15;
             letter-spacing: -1px;
@@ -131,7 +243,7 @@
 
         .hero p {
             font-size: 1.25rem;
-            color: #475569;
+            color: #e2e8f0;
             max-width: 800px;
             margin: 0 auto 2.5rem;
         }
@@ -160,21 +272,22 @@
 
         .btn-outline {
             background-color: transparent;
-            color: var(--dark);
-            border: 2px solid var(--dark);
+            color: white;
+            border: 2px solid white;
             box-shadow: none;
         }
 
         .btn-outline:hover {
-            background-color: var(--dark);
-            color: white;
+            background-color: white;
+            color: var(--dark);
         }
 
         /* Stats Bar */
         .stats {
             display: flex;
             justify-content: space-around;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            background-attachment: fixed; /* Parallax effect */
             color: white;
             padding: 4rem 5%;
             flex-wrap: wrap;
@@ -221,6 +334,50 @@
             font-size: 1.2rem;
         }
 
+        /* NEW: Split Layouts & Section Images */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-image {
+            width: 100%;
+            height: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid var(--light);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .service-detail-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
         /* Services Grid */
         .services {
             padding: 6rem 5%;
@@ -257,12 +414,31 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             transition: all 0.4s ease;
             border-top: 4px solid transparent;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card::after {
+            content: '→ Learn More';
+            display: block;
+            margin-top: 1.5rem;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 0.9rem;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 30px rgba(0,0,0,0.08);
             border-top: 4px solid var(--secondary);
+        }
+
+        .card:hover::after {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .card-icon {
@@ -318,7 +494,7 @@
 
         /* CTA / Footer */
         footer {
-            background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+            background: linear-gradient(rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.98)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop') center/cover no-repeat;
             color: white;
             text-align: center;
             padding: 7rem 5% 4rem;
@@ -388,6 +564,120 @@
             width: 35px;
             height: 35px;
             fill: white;
+        }
+
+        /* -------------------------------------
+           NEW: Service Details Page Layout
+           ------------------------------------- */
+        #service-view {
+            padding: 4rem 5%;
+            background-color: var(--light);
+            min-height: 80vh;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            cursor: pointer;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .sp-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sp-content {
+            background: white;
+            padding: 3.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .sp-content h2 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            line-height: 1.2;
+        }
+
+        .sp-content .sp-subtitle {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .sp-content h3 {
+            color: var(--dark);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        .sp-content ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .sp-content li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        /* Sidebar CTA */
+        .sp-sidebar {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .sp-sidebar h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #7dd3fc;
+        }
+
+        .sp-sidebar p {
+            margin-bottom: 2rem;
+            color: #e2e8f0;
+            font-size: 1.1rem;
+        }
+
+        .sp-sidebar .btn {
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 1rem;
+            background-color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .sp-sidebar .btn:hover {
+            background-color: transparent;
+            color: white;
+            border-color: white;
         }
 
         /* Appointment Modal / Form Styles */
@@ -494,7 +784,6 @@
             box-shadow: 0 6px 15px rgba(2, 132, 199, 0.3);
         }
 
-        /* Success Message styling */
         .success-message {
             display: none; 
             text-align: center;
@@ -509,139 +798,206 @@
         }
 
         /* Responsive */
+        @media (max-width: 900px) {
+            .sp-layout { grid-template-columns: 1fr; }
+            .sp-sidebar { position: static; margin-top: 2rem; }
+            .split-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+            .split-layout > div:first-child { order: 2; } /* Puts text under image on mobile */
+            .split-layout > div:last-child { order: 1; }
+        }
+
         @media (max-width: 768px) {
             nav ul { display: none; }
+            .logo { font-size: 1.2rem; }
+            .logo-icon { width: 30px; height: 30px; }
             .hero h1 { font-size: 2.8rem; }
             .hero { padding: 6rem 5%; }
             .stat-box h2 { font-size: 2.5rem; }
+            .sp-content { padding: 2rem 1.5rem; }
+            .sp-content h2 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Navigation (Always Visible) -->
     <header>
-        <div class="logo">TrueSphere <span>Tax & Accounting</span></div>
+        <div class="logo" onclick="goHome()">
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="16" stroke="#38bdf8" stroke-width="3" opacity="0.8"/>
+                <path d="M 20 4 C 28 4, 28 36, 20 36" stroke="#e2e8f0" stroke-width="2.5" fill="none"/>
+                <path d="M 4 20 C 4 28, 36 28, 36 20" stroke="#e2e8f0" stroke-width="2.5" fill="none"/>
+                <circle cx="20" cy="20" r="4" fill="#38bdf8"/>
+            </svg>
+            TrueSphere <span>Tax & Accounting</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a class="btn-nav book-trigger">Book a Consultation</a></li>
+                <li><a onclick="goHome()">Home</a></li>
+                
+                <!-- NEW: Services Dropdown Menu -->
+                <li class="dropdown">
+                    <a onclick="goHome()" style="display: flex; align-items: center; gap: 5px;">Services <span style="font-size: 0.7em;">▼</span></a>
+                    <div class="dropdown-content">
+                        <a onclick="openService('itr')">Income Tax Returns</a>
+                        <a onclick="openService('gst')">GST Registration & Returns</a>
+                        <a onclick="openService('company')">Company Incorporations</a>
+                        <a onclick="openService('partnership')">Partnership Registrations</a>
+                        <a onclick="openService('esic')">ESIC & PF Registration</a>
+                        <a onclick="openService('msme')">MSME Registration</a>
+                        <a onclick="openService('tds')">TDS & Payroll</a>
+                        <a onclick="openService('accounting')">Accounting & Bookkeeping</a>
+                        <a onclick="openService('cma')">Financial Projections</a>
+                        <a onclick="openService('fssai')">Food License (FSSAI)</a>
+                        <a onclick="openService('labour')">Labour License</a>
+                        <a onclick="openService('cfo')">Virtual CFO Services</a>
+                    </div>
+                </li>
+
+                <li><a onclick="goHome()">About</a></li>
+                <li><a class="btn-nav book-trigger" data-service="General Consultation">Book a Consultation</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <h4 class="reveal">CA & CMA Qualified Practice</h4>
-        <h1 class="reveal delay-1">Get Your Taxes <br>Handled Right</h1>
-        <p class="reveal delay-2">Expert tax advisory and accounting services tailored for individuals, startups, and growing businesses. Accurate. Compliant. Trusted.</p>
-        <div class="reveal delay-3">
-            <button class="btn book-trigger">Consult Today</button>
-            <a href="#services" class="btn btn-outline">View Services</a>
-        </div>
-    </section>
+    <!-- ==============================================
+         VIEW 1: THE HOMEPAGE 
+         ============================================== -->
+    <div id="home-view">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <h4 class="reveal">Top CA & CMA Qualified Practice in Hyderabad</h4>
+            <h1 class="reveal delay-1">Expert Tax & CA Services <br>in Hyderabad</h1>
+            <p class="reveal delay-2">Hyderabad's most trusted tax advisory and accounting firm. We provide expert ITR filing, GST, and compliance services tailored for individuals, startups, and growing businesses across Telangana.</p>
+            <div class="reveal delay-3">
+                <button class="btn book-trigger" data-service="General Consultation">Consult Today</button>
+                <a href="#services" class="btn btn-outline">View Services</a>
+            </div>
+        </section>
 
-    <section class="profile reveal">
-        <h2>B. Archana Reddy</h2>
-        <h4>CA · CMA · Senior Tax Advisor</h4>
-        <p style="color: #64748b;">GST & ITR specialist</p>
-    </section>
+        <!-- Professional Profile -->
+        <section class="profile reveal">
+            <div class="profile-container">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="B. Archana Reddy - Top CA in Hyderabad" class="profile-img">
+                <div>
+                    <h2>B. Archana Reddy</h2>
+                    <h4>Leading Chartered Accountant in Hyderabad (CA · CMA)</h4>
+                    <p style="color: #64748b; font-size: 1.1rem;">Expert Tax Consultant & GST Specialist</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="stats reveal">
-        <div class="stat-box">
-            <h2>500+</h2>
-            <p>Clients served</p>
-        </div>
-        <div class="stat-box">
-            <h2>12+</h2>
-            <p>Years experience</p>
-        </div>
-        <div class="stat-box">
-            <h2>100%</h2>
-            <p>Compliance rate</p>
-        </div>
-    </section>
+        <!-- Statistics Section -->
+        <section class="stats reveal">
+            <div class="stat-box">
+                <h2>500+</h2>
+                <p>Clients served</p>
+            </div>
+            <div class="stat-box">
+                <h2>12+</h2>
+                <p>Years experience</p>
+            </div>
+            <div class="stat-box">
+                <h2>100%</h2>
+                <p>Compliance rate</p>
+            </div>
+        </section>
 
-    <section id="services" class="services">
-        <h2 class="section-title reveal">What we offer</h2>
-        <p class="section-subtitle reveal">From tax filings to company incorporations, we cover every financial and compliance need your business demands.</p>
-        
-        <div class="grid">
-            <div class="card reveal delay-1">
-                <div class="card-icon">📋</div>
-                <h3>Income Tax Returns</h3>
-                <p>Accurate ITR filing for individuals, firms, and corporates with maximum deductions claimed.</p>
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2 class="section-title reveal">What we offer</h2>
+            <p class="section-subtitle reveal">From tax filings to company incorporations, we cover every financial and compliance need your business demands.</p>
+            
+            <div class="grid">
+                <!-- Each card calls openService(id) -->
+                <div class="card reveal delay-1" onclick="openService('itr')">
+                    <div class="card-icon">📋</div>
+                    <h3>Income Tax Returns (ITR)</h3>
+                    <p>Accurate ITR filing for individuals, tech professionals, firms, and corporates in Hyderabad.</p>
+                </div>
+                <div class="card reveal delay-2" onclick="openService('gst')">
+                    <div class="card-icon">🧾</div>
+                    <h3>GST Registration Hyderabad</h3>
+                    <p>End-to-end GST compliance in Telangana including new registration, monthly filing, and reconciliation.</p>
+                </div>
+                <div class="card reveal delay-3" onclick="openService('company')">
+                    <div class="card-icon">🏢</div>
+                    <h3>Company Registration</h3>
+                    <p>Seamless Pvt Ltd, LLP, and OPC incorporation in Hyderabad with all ROC filings handled expertly.</p>
+                </div>
+                <div class="card reveal delay-1" onclick="openService('partnership')">
+                    <div class="card-icon">🤝</div>
+                    <h3>Partnership Registration</h3>
+                    <p>Partnership deed drafting, Telangana RoF registration, and ongoing statutory compliance support.</p>
+                </div>
+                <div class="card reveal delay-2" onclick="openService('esic')">
+                    <div class="card-icon">🛡️</div>
+                    <h3>ESIC & PF Consultants</h3>
+                    <p>Employee provident fund and insurance registration for Hyderabad employers with monthly return filing.</p>
+                </div>
+                <div class="card reveal delay-3" onclick="openService('msme')">
+                    <div class="card-icon">📈</div>
+                    <h3>MSME (Udyam) Registration</h3>
+                    <p>Udyam registration to unlock MSME benefits, Telangana state subsidies, and government loan schemes.</p>
+                </div>
+                <div class="card reveal delay-1" onclick="openService('tds')">
+                    <div class="card-icon">💰</div>
+                    <h3>TDS & Payroll Services</h3>
+                    <p>Complete TDS management and payroll processing for Hyderabad businesses with full statutory compliance.</p>
+                </div>
+                <div class="card reveal delay-2" onclick="openService('accounting')">
+                    <div class="card-icon">📊</div>
+                    <h3>Accounting & Bookkeeping</h3>
+                    <p>Top bookkeeping firm serving businesses across HITEC City, Jubilee Hills, and greater Hyderabad.</p>
+                </div>
+                <div class="card reveal delay-3" onclick="openService('cma')">
+                    <div class="card-icon">🔮</div>
+                    <h3>Project Reports & CMA</h3>
+                    <p>Detailed CMA data and financial projections for bank loans and investor pitches in the Hyderabad ecosystem.</p>
+                </div>
+                <div class="card reveal delay-1" onclick="openService('fssai')">
+                    <div class="card-icon">🍽️</div>
+                    <h3>Food License (FSSAI)</h3>
+                    <p>FSSAI basic registration and Telangana state licences for all Hyderabad food business operators.</p>
+                </div>
+                <div class="card reveal delay-2" onclick="openService('labour')">
+                    <div class="card-icon">⚖️</div>
+                    <h3>Labour License & GHMC</h3>
+                    <p>Registration under Telangana Shops & Establishments Act and GHMC Trade License compliance.</p>
+                </div>
+                <div class="card reveal delay-3" onclick="openService('cfo')">
+                    <div class="card-icon">🌐</div>
+                    <h3>Virtual CFO Services</h3>
+                    <p>Strategic financial advisory and top-tier CFO-level guidance for fast-growing startups in Hyderabad.</p>
+                </div>
             </div>
-            <div class="card reveal delay-2">
-                <div class="card-icon">🧾</div>
-                <h3>GST Registration & Returns</h3>
-                <p>End-to-end GST compliance including registration, monthly filing, and reconciliation.</p>
-            </div>
-            <div class="card reveal delay-3">
-                <div class="card-icon">🏢</div>
-                <h3>Company Incorporations</h3>
-                <p>Seamless Pvt Ltd, LLP, and OPC incorporation with all MCA filings handled.</p>
-            </div>
-            <div class="card reveal delay-1">
-                <div class="card-icon">🤝</div>
-                <h3>Partnership Registrations</h3>
-                <p>Partnership deed drafting, registration, and ongoing statutory compliance support.</p>
-            </div>
-            <div class="card reveal delay-2">
-                <div class="card-icon">🛡️</div>
-                <h3>ESIC & PF Registration</h3>
-                <p>Employee provident fund and insurance registration with monthly return filing.</p>
-            </div>
-            <div class="card reveal delay-3">
-                <div class="card-icon">📈</div>
-                <h3>MSME Registration</h3>
-                <p>Udyam registration to unlock MSME benefits, subsidies, and government schemes.</p>
-            </div>
-            <div class="card reveal delay-1">
-                <div class="card-icon">💰</div>
-                <h3>TDS & Payroll</h3>
-                <p>Complete TDS management and payroll processing with full statutory compliance.</p>
-            </div>
-            <div class="card reveal delay-2">
-                <div class="card-icon">📊</div>
-                <h3>Accounting & Bookkeeping</h3>
-                <p>Day-to-day accounting, MIS reporting, and financial statement preparation.</p>
-            </div>
-            <div class="card reveal delay-3">
-                <div class="card-icon">🔮</div>
-                <h3>Financial Projections</h3>
-                <p>Detailed CMA data and financial projections for bank loans and investor presentations.</p>
-            </div>
-            <div class="card reveal delay-1">
-                <div class="card-icon">🍽️</div>
-                <h3>Food License (FSSAI)</h3>
-                <p>FSSAI basic registration and state licence for all food business operators.</p>
-            </div>
-            <div class="card reveal delay-2">
-                <div class="card-icon">⚖️</div>
-                <h3>Labour License</h3>
-                <p>Registration under Shops & Establishments Act and Contract Labour Act.</p>
-            </div>
-            <div class="card reveal delay-3">
-                <div class="card-icon">🌐</div>
-                <h3>Virtual CFO Services</h3>
-                <p>Strategic financial advisory and CFO-level guidance for growing businesses.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about-features">
-        <h2 class="section-title reveal">About the practice</h2>
-        <p class="section-subtitle reveal" style="max-width: 800px; margin: 0 auto 2rem;">Trusted Advisors for Individuals & Businesses<br><br>TrueSphere Tax & Accounting Services is led by B. Archana Reddy, a dual-qualified Chartered Accountant (CA) and Cost & Management Accountant (CMA) with deep expertise in Indian tax law and business compliance. Our firm takes pride in delivering accurate, timely, and personalised financial services that help clients stay fully compliant and grow with confidence.</p>
-        
-        <div class="badges reveal delay-1">
-            <span class="badge">CA Qualified</span>
-            <span class="badge">CMA Certified</span>
-            <span class="badge">ICAI Member</span>
-            <span class="badge">GST Practitioner</span>
-        </div>
+        <!-- About Section -->
+        <section id="about" class="about-features">
+            <div class="split-layout">
+                <!-- Text Content -->
+                <div class="reveal delay-1">
+                    <h2 class="section-title" style="text-align: left;">About the practice</h2>
+                    <p class="section-subtitle" style="text-align: left; margin-bottom: 1.5rem; color: var(--primary); font-weight: bold;">Trusted Financial Advisors in Hyderabad</p>
+                    <p style="margin-bottom: 1.5rem; color: #475569; font-size: 1.1rem;">TrueSphere Tax & Accounting Services is a premier CA firm based in Hyderabad, led by B. Archana Reddy, a dual-qualified Chartered Accountant (CA) and Cost & Management Accountant (CMA) with deep expertise in Indian tax law and business compliance.</p>
+                    <p style="margin-bottom: 2rem; color: #475569; font-size: 1.1rem;">We take pride in delivering accurate, timely, and personalised financial services that help local Hyderabad businesses and individuals stay fully compliant and grow with confidence.</p>
+                    
+                    <div class="badges" style="justify-content: flex-start;">
+                        <span class="badge">CA Qualified</span>
+                        <span class="badge">CMA Certified</span>
+                        <span class="badge">ICAI Member</span>
+                        <span class="badge">GST Practitioner</span>
+                    </div>
+                </div>
 
-        <h2 class="section-title reveal" style="margin-top: 6rem;">Why Choose TrueSphere?</h2>
+                <!-- Image Content -->
+                <div class="reveal delay-2">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=1000&auto=format&fit=crop" alt="TrueSphere Office" class="section-image">
+                </div>
+            </div>
+
+            <h2 class="section-title reveal" style="margin-top: 8rem;">Why Choose TrueSphere?</h2>
         <div class="grid" style="margin-top: 3rem;">
             <div class="card reveal delay-1">
                 <h3>Dual Qualification</h3>
@@ -660,42 +1016,80 @@
                 <p>Fixed, upfront fees with absolutely no hidden charges.</p>
             </div>
             <div class="card reveal delay-2">
-                <h3>Hyderabad Based</h3>
-                <p>Local knowledge with national-level compliance coverage.</p>
+                <h3>Top Rated in Hyderabad</h3>
+                <p>Deep local expertise serving businesses across HITEC City, Jubilee Hills, and greater Hyderabad, with national-level compliance coverage.</p>
             </div>
         </div>
     </section>
+    </div> <!-- END HOME VIEW -->
 
+
+    <!-- ==============================================
+         VIEW 2: THE SERVICE DETAILS PAGE (Hidden by default)
+         ============================================== -->
+    <div id="service-view" style="display: none;">
+        <div class="sp-layout">
+            <!-- Left Side: Content Injected via JS -->
+            <div class="sp-content">
+                <a onclick="goHome()" class="back-link">← Back to all services</a>
+                
+                <!-- NEW: Dynamic Service Image Placeholder -->
+                <img id="sp-image" src="" alt="Service Image" class="service-detail-image">
+
+                <h2 id="sp-title"><span id="sp-icon"></span> Service Title</h2>
+                <p class="sp-subtitle" id="sp-subtitle">Service Subtitle</p>
+                
+                <div id="sp-body">
+                    <!-- Dynamic Details go here -->
+                </div>
+            </div>
+
+            <!-- Right Side: Sticky Booking Sidebar -->
+            <div class="sp-sidebar">
+                <h3>Ready to proceed?</h3>
+                <p>Book a consultation call with our experts to discuss your requirements and get started.</p>
+                <button class="btn book-trigger" id="sidebar-book-btn" data-service="">Book a Call Now</button>
+            </div>
+        </div>
+    </div> <!-- END SERVICE VIEW -->
+
+
+    <!-- Footer (Always Visible) -->
     <footer>
-        <h2 class="reveal">Ready to Simplify Your Finances?</h2>
-        <p class="reveal delay-1">Get a free first consultation with our expert team. Let us handle the complexity so you can focus on what matters — growing your business.</p>
+        <h2 class="reveal">Looking for a Reliable CA in Hyderabad?</h2>
+        <p class="reveal delay-1">Get a free first consultation with our expert accounting team. Let us handle the financial complexity so you can focus on what matters — growing your business.</p>
         <div class="reveal delay-2">
-            <button class="btn book-trigger">Book Appointment</button>
+            <button class="btn book-trigger" data-service="General Consultation">Book Appointment</button>
         </div>
         
         <div class="contact-info reveal delay-3">
             <p>📞 +91 7396 860 591</p>
             <p style="margin-top: 0.5rem;">✉ <a href="mailto:ca.archanareddy03@gmail.com">ca.archanareddy03@gmail.com</a></p>
+            <p style="margin-top: 1rem; font-size: 1rem; font-weight: normal; color: #bae6fd;">📍 Hyderabad, Telangana, India</p>
         </div>
-        <p class="reveal" style="margin-top: 5rem; font-size: 0.9rem; opacity: 0.4;">&copy; 2026 TrueSphere Tax & Accounting Services. All rights reserved.</p>
+        <p class="reveal" style="margin-top: 5rem; font-size: 0.9rem; opacity: 0.4;">&copy; 2026 TrueSphere Tax & Accounting Services Hyderabad. All rights reserved.</p>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/917396860591" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.2-115-65.1-157zM223.9 414.8c-33.2 0-65.8-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7.1c-18.4-29.6-28.1-64.3-28.1-99.6 0-104.4 84.9-189.3 189.4-189.3 50.6 0 98.2 19.7 134 55.5 35.8 35.8 55.5 83.4 55.5 134 0 104.4-84.9 189.3-189.4 189.3zm103.5-141.5c-5.7-2.8-33.7-16.6-38.9-18.5-5.2-1.9-9-2.8-12.8 2.8-3.8 5.7-14.7 18.5-18 22.3-3.3 3.8-6.6 4.3-12.3 1.4-5.7-2.8-24-8.9-45.7-28.2-16.9-15.1-28.3-33.7-31.6-39.4-3.3-5.7-.4-8.8 2.5-11.6 2.6-2.6 5.7-6.6 8.5-9.9 2.8-3.3 3.8-5.7 5.7-9.5 1.9-3.8.9-7.1-.5-9.9-1.4-2.8-12.8-30.8-17.5-42.2-4.6-11.1-9.3-9.6-12.8-9.8-3.3-.2-7.1-.2-10.9-.2-3.8 0-10 1.4-15.2 7.1-5.2 5.7-20 19.4-20 47.4 0 28 20.4 55 23.2 58.8 2.8 3.8 40.1 61.2 97.1 85.8 13.6 5.9 24.2 9.4 32.5 12 13.7 4.3 26.2 3.7 36 2.2 10.9-1.7 33.7-13.8 38.4-27.1 4.7-13.3 4.7-24.7 3.3-27.1-1.4-2.4-5.2-3.8-10.9-6.6z"/>
         </svg>
     </a>
 
+    <!-- Pop-up Booking Modal -->
     <div class="modal-overlay" id="bookingModal">
         <div class="modal-content">
             <span class="close-btn" id="closeModal" title="Close form">&times;</span>
             
+            <!-- Success Message -->
             <div class="success-message" id="successMessage">
                 <div class="success-icon">✓</div>
                 <h2 style="color: var(--primary);">Request Sent!</h2>
                 <p style="margin-top: 10px; color: #64748b;">Thank you. We will contact you shortly to confirm your appointment.</p>
             </div>
 
+            <!-- The Form Inputs -->
             <div id="formContent">
                 <h2 style="color: var(--dark); margin-bottom: 0.5rem;">Book a Consultation</h2>
                 <p style="margin-bottom: 2rem; font-size: 0.95rem; color: #64748b;">Fill out the form below and we will contact you shortly.</p>
@@ -740,8 +1134,286 @@
         </div>
     </div>
 
+    <!-- JavaScript for Logic & Data -->
     <script>
-        /* --- Scroll Reveal Animations --- */
+        /* --- 1. Service Data Details --- */
+        const servicesData = {
+            'itr': {
+                icon: '📋',
+                title: 'Income Tax Returns (ITR) in Hyderabad',
+                subtitle: 'Expert ITR filing for individuals, tech professionals, firms, and corporates across Hyderabad with maximum deductions claimed.',
+                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Selection of Correct ITR Form:</strong> We identify whether ITR-1, 2, 3, 4, 5, 6 or 7 applies to your specific income profile as a Hyderabad resident or business.</li>
+                        <li><strong>Salary & House Property Income:</strong> Proper declaration and tax optimization for IT professionals in HITEC City and local property owners.</li>
+                        <li><strong>Capital Gains Calculation:</strong> Precise computation of short-term and long-term capital gains from Stocks, Mutual Funds, and Real Estate in Telangana.</li>
+                        <li><strong>Business & Profession (Presumptive):</strong> Optimization of taxes under sections 44AD, 44ADA, and 44AE for local freelancers and small businesses.</li>
+                        <li><strong>Maximum Deductions:</strong> Ensuring you utilize all available Chapter VI-A deductions (80C, 80D, 80G, etc.) to minimize your tax outflow.</li>
+                        <li><strong>Notice Rectification:</strong> Representing you locally and drafting responses for defective returns or scrutiny notices from the Income Tax Department.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Avoid heavy penalties for late filing, ensure zero errors in tax computation, and achieve complete peace of mind knowing a top qualified CA in Hyderabad is handling your wealth compliance.</p>
+                `
+            },
+            'gst': {
+                icon: '🧾',
+                title: 'GST Registration & Returns in Hyderabad',
+                subtitle: 'End-to-end GST compliance including new registration, monthly filing, and reconciliation for Telangana businesses.',
+                image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>New GST Registration in Hyderabad:</strong> Hassle-free procurement of your Telangana GSTIN within days for all types of business structures.</li>
+                        <li><strong>Monthly/Quarterly Returns:</strong> Punctual preparation and filing of GSTR-1, GSTR-3B, and CMP-08 based on your specific scheme.</li>
+                        <li><strong>Annual Returns & Audit:</strong> Comprehensive filing of GSTR-9 and GSTR-9C with full reconciliation by local tax experts.</li>
+                        <li><strong>ITC Reconciliation:</strong> Matching your purchase register with GSTR-2A/2B to ensure you never lose your rightful Input Tax Credit.</li>
+                        <li><strong>Letter of Undertaking (LUT):</strong> Filing LUT for Hyderabad exporters to export goods/services without payment of integrated tax.</li>
+                        <li><strong>E-Way Bills & E-Invoicing:</strong> Setup and guidance on compliance for logistics and B2B billing within and outside Telangana.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Our proactive calendar ensures you never pay late fees. As top GST consultants in Hyderabad, we protect your cash flow by maximizing valid ITC and keeping you 100% compliant with changing tax laws.</p>
+                `
+            },
+            'company': {
+                icon: '🏢',
+                title: 'Company Incorporations in Hyderabad',
+                subtitle: 'Seamless Pvt Ltd, LLP, and OPC company registration in Hyderabad with all ROC filings handled expertly.',
+                image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Startup Structure Advisory:</strong> Helping founders in T-Hub and across Hyderabad choose between Private Limited, LLP, or One Person Company (OPC).</li>
+                        <li><strong>Name Approval:</strong> Conducting trademark checks and filing RUN/SPICe+ for guaranteed name approval with the Registrar of Companies (ROC) Hyderabad.</li>
+                        <li><strong>Digital Signatures & DIN:</strong> Procurement of DSCs and Director Identification Numbers for all founders.</li>
+                        <li><strong>MOA & AOA Drafting:</strong> Custom drafting of the Memorandum and Articles of Association tailored to your business goals.</li>
+                        <li><strong>PAN, TAN & Bank Setup:</strong> Automatic application of company PAN/TAN and assistance with opening corporate current accounts in local banks.</li>
+                        <li><strong>Post-Incorporation Compliance:</strong> Filing commencement of business (INC-20A) and auditor appointment (ADT-1).</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Launch your Hyderabad startup legally and securely. We handle the MCA bureaucratic red tape so you can focus entirely on building your product and acquiring customers locally and globally.</p>
+                `
+            },
+            'partnership': {
+                icon: '🤝',
+                title: 'Partnership Firm Registration in Hyderabad',
+                subtitle: 'Partnership deed drafting, Telangana RoF registration, and ongoing statutory compliance support.',
+                image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Deed Drafting:</strong> Crafting a robust Partnership Deed outlining profit-sharing, capital contribution, and dispute resolution clauses tailored for local businesses.</li>
+                        <li><strong>Notarization & Stamping:</strong> Assisting with the procurement of appropriate Telangana state stamp paper and legal notarization.</li>
+                        <li><strong>Registrar of Firms (RoF) Telangana:</strong> Officially registering the firm with the state Registrar in Hyderabad to grant it legal standing to sue and be sued.</li>
+                        <li><strong>PAN Application:</strong> Applying for a distinct PAN card for the newly formed partnership entity.</li>
+                        <li><strong>Conversion Advisory:</strong> Guidance on converting an existing unregistered partnership into an LLP or Private Limited Company for limited liability benefits.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Protect individual partners with clear legal boundaries and profit-sharing rules, while ensuring the firm is recognized by Hyderabad banks for loans and current accounts.</p>
+                `
+            },
+            'esic': {
+                icon: '🛡️',
+                title: 'ESIC & PF Consultants in Hyderabad',
+                subtitle: 'Employee provident fund and insurance registration for Hyderabad employers with monthly return filing.',
+                image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Employer Registration:</strong> Obtaining the Employer Code for both Employees' Provident Fund (EPFO) and State Insurance Corporation (ESIC) covering Telangana limits.</li>
+                        <li><strong>Employee KYC:</strong> Seeding Aadhaar, PAN, and local bank details to generate and activate UAN numbers for all your staff.</li>
+                        <li><strong>Monthly Challan Generation:</strong> Calculating exact employer and employee contributions and generating monthly payment challans effortlessly.</li>
+                        <li><strong>Return Filing:</strong> Ensuring punctual filing of monthly and annual returns for both departments to avoid local scrutiny.</li>
+                        <li><strong>Claims & Transfers:</strong> Assisting your Hyderabad-based employees with PF withdrawals, transfers, and ESIC benefit claims at local dispensaries.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Stay strictly compliant with Telangana labour laws, avoid heavy departmental penalties from local authorities, and build trust with your workforce by securing their social benefits.</p>
+                `
+            },
+            'msme': {
+                icon: '📈',
+                title: 'MSME (Udyam) Registration in Hyderabad',
+                subtitle: 'Udyam registration to unlock MSME benefits, Telangana state subsidies, and government loan schemes.',
+                image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Classification Assessment:</strong> Determining your status as a Micro, Small, or Medium enterprise based on your investment and turnover in Hyderabad.</li>
+                        <li><strong>Udyam Registration:</strong> End-to-end filing to generate your official Udyam Registration Certificate recognized by the Government of India.</li>
+                        <li><strong>NIC Code Selection:</strong> Accurately mapping your business activities to the correct National Industrial Classification codes.</li>
+                        <li><strong>TS-iPASS & Scheme Advisory:</strong> Identifying applicable government schemes, such as TS-iPASS subsidies, CGTMSE (collateral-free loans), or local electricity benefits.</li>
+                        <li><strong>Updates & Modifications:</strong> Updating existing Udyog Aadhaar to the new Udyam portal or modifying plant details located in Telangana.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Unlock 50% subsidies on trademark registrations, get protection against delayed payments from buyers, and gain priority access to lower interest rates from Hyderabad banks.</p>
+                `
+            },
+            'tds': {
+                icon: '💰',
+                title: 'TDS & Payroll Management in Hyderabad',
+                subtitle: 'Complete TDS management and payroll processing for Hyderabad businesses with full statutory compliance.',
+                image: 'https://images.unsplash.com/photo-1580519542036-ed47f3e42214?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Payroll Processing:</strong> Accurate monthly salary calculation factoring in leaves, local holidays, bonuses, and statutory deductions for your Hyderabad team.</li>
+                        <li><strong>TDS Deduction & Payment:</strong> Calculating exact Tax Deducted at Source for employees (Sec 192) and local vendors/contractors (Sec 194), generating challans.</li>
+                        <li><strong>Quarterly Returns:</strong> Punctual filing of Form 24Q (Salaries) and Form 26Q (Non-Salaries) with the Income Tax Department.</li>
+                        <li><strong>Form 16/16A Generation:</strong> Issuing customized TDS certificates to your employees and local vendors at the end of the financial year.</li>
+                        <li><strong>Lower Deduction Certificates:</strong> Assisting clients in applying to local assessing officers for certificates for lower or nil deduction of TDS.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Ensure your local employees are paid accurately and on time while protecting your Hyderabad firm from severe TDS default notices, interest, and late filing fees.</p>
+                `
+            },
+            'accounting': {
+                icon: '📊',
+                title: 'Accounting & Bookkeeping Services in Hyderabad',
+                subtitle: 'Top bookkeeping firm serving businesses across HITEC City, Jubilee Hills, and greater Hyderabad.',
+                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Ledger Maintenance:</strong> Daily recording of sales, purchases, expenses, and journal entries using top software like Tally, Zoho Books, or QuickBooks.</li>
+                        <li><strong>Bank Reconciliation:</strong> Matching your local bank statements with your accounting books to identify missing entries or discrepancies immediately.</li>
+                        <li><strong>Accounts Payable & Receivable:</strong> Tracking who owes you money locally and globally, ensuring optimal working capital management.</li>
+                        <li><strong>MIS Reporting:</strong> Generating customized monthly Management Information System reports tailored for Hyderabad business owners to track profitability.</li>
+                        <li><strong>Year-End Finalization:</strong> Preparation of finalized Profit & Loss Accounts and Balance Sheets for annual tax audits by our leading CA team.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Move away from messy spreadsheets. Gain crystal-clear visibility into your financial health, making it easier to secure local bank loans, attract investors, and scale your operations in Telangana.</p>
+                `
+            },
+            'cma': {
+                icon: '🔮',
+                title: 'Project Reports & CMA Data in Hyderabad',
+                subtitle: 'Detailed CMA data and financial projections for bank loans and investor pitches in the Hyderabad ecosystem.',
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>CMA Data Preparation:</strong> Creating Credit Monitoring Arrangement (CMA) data exactly as required by local Hyderabad banks (SBI, HDFC, ICICI) for Cash Credit (CC) and Term Loans.</li>
+                        <li><strong>Project Reports:</strong> Drafting detailed business plans highlighting market scope, technical feasibility, and financial viability for Telangana projects.</li>
+                        <li><strong>3-5 Year Projections:</strong> Forecasting realistic Profit & Loss, Balance Sheets, and Cash Flow statements based on local industry benchmarks.</li>
+                        <li><strong>Ratio Analysis:</strong> Ensuring critical banking ratios (DSCR, Current Ratio, Debt-Equity) align perfectly with Indian lending norms.</li>
+                        <li><strong>Valuation Advisory:</strong> DCF (Discounted Cash Flow) and relative valuation modeling for pitching to Hyderabad-based VC firms and angel investors.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Drastically increase your chances of loan approval. We translate your business vision into the strict financial language that Hyderabad bank managers and investors demand to see.</p>
+                `
+            },
+            'fssai': {
+                icon: '🍽️',
+                title: 'Food License (FSSAI) Registration in Hyderabad',
+                subtitle: 'FSSAI basic registration and Telangana state licences for all Hyderabad food business operators.',
+                image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Eligibility Check:</strong> Determining whether your business requires Basic Registration, Telangana State License, or Central License based on turnover and capacity.</li>
+                        <li><strong>Application Filing:</strong> Expert preparation and filing of Form A or Form B on the FoSCoS portal with all required regional declarations.</li>
+                        <li><strong>Documentation:</strong> Assistance with drafting FSMS (Food Safety Management System) plans, recall plans, and premise blueprints for local inspectors.</li>
+                        <li><strong>Annual Returns:</strong> Filing mandatory annual returns (Form D1) for manufacturing and importing units operating out of Hyderabad.</li>
+                        <li><strong>Modifications & Renewals:</strong> Updating existing licenses for new product categories and tracking renewal deadlines to avoid GHMC/FSSAI penalties.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Operate your Hyderabad restaurant, cloud kitchen in Madhapur, or FMCG brand completely legally. The FSSAI logo builds massive consumer trust and prevents premise sealing by health inspectors.</p>
+                `
+            },
+            'labour': {
+                icon: '⚖️',
+                title: 'Labour License & GHMC Trade License in Hyderabad',
+                subtitle: 'Registration under Telangana Shops & Establishments Act and GHMC Trade License compliance.',
+                image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Shops & Establishments (S&E):</strong> Mandatory Telangana state-level registration for offices, shops, and commercial spaces within 30 days of commencement.</li>
+                        <li><strong>GHMC Trade Licenses:</strong> End-to-end assistance with Greater Hyderabad Municipal Corporation (GHMC) trade license applications and renewals.</li>
+                        <li><strong>Contract Labour Act:</strong> Obtaining Principal Employer Certificates and Contractor Licenses for local businesses utilizing outsourced manpower.</li>
+                        <li><strong>Statutory Registers:</strong> Maintenance of mandatory registers for attendance, wages, fines, and overtime strictly as per Telangana state laws.</li>
+                        <li><strong>Periodic Renewals:</strong> Tracking expiry dates and filing timely renewal applications to ensure uninterrupted business operations in the city.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Open commercial bank accounts smoothly and safeguard your business against surprise inspections, steep local penalties, and operational shutdowns by GHMC or labour authorities.</p>
+                `
+            },
+            'cfo': {
+                icon: '🌐',
+                title: 'Virtual CFO Services in Hyderabad',
+                subtitle: 'Strategic financial advisory and top-tier CFO-level guidance for fast-growing startups in Hyderabad.',
+                image: 'https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=1200&auto=format&fit=crop',
+                body: `
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Cash Flow Management:</strong> Implementing strict controls to optimize working capital and ensure liquidity for your Hyderabad-based operations.</li>
+                        <li><strong>Budgeting & Forecasting:</strong> Creating departmental budgets and tracking variance (planned vs. actual expenses) for ultimate efficiency.</li>
+                        <li><strong>Profitability Analysis:</strong> Identifying high-margin products/services and pinpointing areas of cash burn to dramatically improve the bottom line.</li>
+                        <li><strong>Board Reporting:</strong> Designing and presenting high-level financial dashboards to founders and board members in your corporate meetings.</li>
+                        <li><strong>Compliance Oversight:</strong> Acting as the central point of contact to manage all your external auditors, local tax consultants, and legal teams seamlessly.</li>
+                    </ul>
+                    <h3>Key Benefits</h3>
+                    <p>Get the strategic brainpower of an experienced financial executive at a fraction of the cost of a full-time hire in HITEC City. Make data-driven decisions that rapidly scale your business to the next level.</p>
+                `
+            }
+        };
+
+        /* --- 2. Single Page Application Logic --- */
+        const homeView = document.getElementById('home-view');
+        const serviceView = document.getElementById('service-view');
+        
+        // Elements to inject data into
+        const spTitle = document.getElementById('sp-title');
+        const spSubtitle = document.getElementById('sp-subtitle');
+        const spBody = document.getElementById('sp-body');
+        const spIcon = document.getElementById('sp-icon');
+        const spImage = document.getElementById('sp-image');
+        const sidebarBookBtn = document.getElementById('sidebar-book-btn');
+
+        function openService(serviceId) {
+            const data = servicesData[serviceId];
+            if(!data) return;
+
+            // Populate the Service Page
+            spTitle.innerHTML = `<span style="font-size: 3rem; margin-right: 15px;">${data.icon}</span> ${data.title}`;
+            spSubtitle.innerText = data.subtitle;
+            spBody.innerHTML = data.body;
+            spImage.src = data.image;
+            spImage.alt = data.title;
+            
+            // Set the data attribute for the booking button so the form knows what was clicked
+            sidebarBookBtn.setAttribute('data-service', data.title);
+
+            // Switch Views
+            homeView.style.display = 'none';
+            serviceView.style.display = 'block';
+
+            // Scroll to top automatically
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Automatically close the dropdown menu
+            const dropdown = document.querySelector('.dropdown-content');
+            if (dropdown) {
+                dropdown.style.display = 'none';
+                // Reset it back after a moment so hover works again if they go back to the menu
+                setTimeout(() => {
+                    dropdown.style.display = '';
+                }, 300);
+            }
+        }
+
+        function goHome() {
+            serviceView.style.display = 'none';
+            homeView.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Retrigger scroll animations for home
+            setTimeout(reveal, 100);
+        }
+
+
+        /* --- 3. Scroll Reveal Animations --- */
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -754,43 +1426,42 @@
                 }
             }
         }
-        
         window.addEventListener("scroll", reveal);
         setTimeout(reveal, 100);
 
-        /* --- Modal and AJAX Form Logic --- */
+
+        /* --- 4. Modal and AJAX Form Logic --- */
         const modal = document.getElementById('bookingModal');
         const closeBtn = document.getElementById('closeModal');
-        const triggerBtns = document.querySelectorAll('.book-trigger');
         const form = document.getElementById('appointmentForm');
         const formContent = document.getElementById('formContent');
         const successMessage = document.getElementById('successMessage');
         const submitBtn = document.getElementById('submitBtn');
+        const problemTextarea = document.getElementById('problem');
 
-        // Open modal
-        triggerBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault(); 
+        // Setup triggers (Use event delegation because we have multiple triggers now)
+        document.addEventListener('click', function(e) {
+            if(e.target && e.target.classList.contains('book-trigger')) {
+                e.preventDefault();
+                
+                // Get the service name from the button to auto-fill the form
+                const serviceName = e.target.getAttribute('data-service');
+                if (serviceName && serviceName !== 'General Consultation') {
+                    problemTextarea.value = `I am interested in availing the ${serviceName} service. Please contact me to discuss further.`;
+                } else {
+                    problemTextarea.value = ''; // Clear it if general
+                }
+
                 modal.style.display = 'flex';
                 formContent.style.display = 'block';
                 successMessage.style.display = 'none';
-                form.reset();
-            });
-        });
-
-        // Close modal manually via the "X" cross icon
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        // Close modal if user clicks outside the white form box
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
             }
         });
 
-        // Handle AJAX Form Submission
+        closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+        window.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+
+        // Handle Form Submission
         form.addEventListener('submit', function(e) {
             e.preventDefault(); 
             submitBtn.textContent = 'Sending...'; 
@@ -801,9 +1472,7 @@
             fetch("https://formsubmit.co/ajax/ca.archanareddy03@gmail.com", {
                 method: "POST",
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             })
             .then(response => response.json())
             .then(data => {
@@ -814,6 +1483,7 @@
                     modal.style.display = 'none';
                     submitBtn.textContent = 'Send Request';
                     submitBtn.disabled = false;
+                    form.reset();
                 }, 3500);
             })
             .catch(error => {
